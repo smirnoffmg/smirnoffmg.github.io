@@ -12,7 +12,7 @@
 - key: Contact
   value:
     - key: Telegram
-      value: value @not_again_please
+      value: "@not_again_please"
       url: "https://t.me/not_again_please"
     - key: Email
       value: smirnoffmg@gmail.com
