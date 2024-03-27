@@ -8,12 +8,12 @@
   typed: true
 - key: Key expertise
   value:
-    - key: Python (at Yandex, Epam, Raiffeisen, etc.)
-      value: 15+ years
-    - key: Leadership and management (almost everywhere)
-      value: 12+ years
-    - key: AWS (at Epam and few startups)
-      value: 8+ years
+    - key: Python
+      value: 15+ years  (at Yandex, Epam, Raiffeisen, etc.)
+    - key: Leadership and management
+      value: 12+ years  (almost everywhere)
+    - key: AWS
+      value: 8+ years  (at Epam and few startups)
 - key: Contact
   value:
     - key: Telegram
