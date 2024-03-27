@@ -1,7 +1,13 @@
 title: Maksim Smirnov
 description: Python Expert and AWS Architect
+email: smirnoffmg@gmail.com
 baseurl: ""
 url: https://smirnoffmg.github.io
+github_username: smirnoffmg
+
+google_analytics: G-4HG9NVZRVF
+linkedin_username: smirnov-maksim-spb
+author: Maksim Smirnov
 
 remote_theme: piazzai/hacked-jekyll
 
