@@ -1,7 +1,14 @@
 title: Maksim Smirnov
 description: Python Expert and AWS Architect
+baseurl: ""
+url: https://smirnoffmg.github.io
 
 remote_theme: piazzai/hacked-jekyll
+
+color_bg: var(--oc-indigo-8)
+color_punct: black
+color_keyval: "#fff"
+color_hover: "#cc5de8"
 
 exclude:
   - README.md
