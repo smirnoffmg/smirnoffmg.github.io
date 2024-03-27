@@ -6,9 +6,14 @@
     - AWS Architect
     - Go Enthusiast
   typed: true
-- key: CV
-  value: cv.pdf
-  url: https://docs.google.com/document/d/1aah_FgxdkXN8s83zg3yw6tIGzr__voIf/edit?usp=sharing&ouid=102792307280629562558&rtpof=true&sd=true
+- key: Key expertise
+  value:
+    - key: Python (at Yandex, Epam, Raiffeisen, etc.)
+      value: 15+ years
+    - key: Leadership and management (almost everywhere)
+      value: 12+ years
+    - key: AWS (at Epam and few startups)
+      value: 8+ years
 - key: Contact
   value:
     - key: Telegram
@@ -23,3 +28,6 @@
       url: https://www.linkedin.com/in/smirnov-maksim-spb/
     - value: GitHub
       url: https://github.com/smirnoffmg
+- key: CV
+  value: google docs
+  url: https://docs.google.com/document/d/1aah_FgxdkXN8s83zg3yw6tIGzr__voIf/edit?usp=sharing&ouid=102792307280629562558&rtpof=true&sd=true

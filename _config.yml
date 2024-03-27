@@ -5,10 +5,10 @@ url: https://smirnoffmg.github.io
 
 remote_theme: piazzai/hacked-jekyll
 
-color_bg: var(--oc-indigo-8)
-color_punct: black
-color_keyval: "#fff"
-color_hover: "#cc5de8"
+color_bg: var(--oc-gray-9)
+color_punct: var(--oc-green-9)
+color_keyvar: var(--oc-green-4)
+color_hover: var(--oc-green-5)
 
 exclude:
   - README.md
