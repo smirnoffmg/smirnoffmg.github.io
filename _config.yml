@@ -9,12 +9,7 @@ google_analytics: G-4HG9NVZRVF
 linkedin_username: smirnov-maksim-spb
 author: Maksim Smirnov
 
-remote_theme: piazzai/hacked-jekyll
-
-# color_bg: var(--oc-gray-9)
-# color_punct: var(--oc-green-9)
-# color_keyvar: var(--oc-green-4)
-# color_hover: var(--oc-green-5)
+remote_theme: smirnoffmg/hacked-jekyll-with-ga
 
 color_bg: var(--oc-indigo-8)
 color_punct: black
