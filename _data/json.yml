@@ -24,8 +24,6 @@
       url: "mailto:smirnoffmg@gmail.com"
 - key: Profiles
   value:
-    - value: LinkedIn
-      url: https://www.linkedin.com/in/smirnov-maksim-spb/
     - value: GitHub
       url: https://github.com/smirnoffmg
     - value: Leetcode
