@@ -19,9 +19,9 @@
     - key: Telegram
       value: "@not_again_please"
       url: "https://t.me/not_again_please"
-    - key: Email
-      value: smirnoffmg@gmail.com
-      url: "mailto:smirnoffmg@gmail.com"
+    - key: LinkedIn
+      value: "https://www.linkedin.com/in/hello-maksim-smirnov"
+      url: "https://www.linkedin.com/in/hello-maksim-smirnov"
 - key: Profiles
   value:
     - value: GitHub
