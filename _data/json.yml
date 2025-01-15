@@ -22,9 +22,12 @@
     - key: LinkedIn
       value: "https://www.linkedin.com/in/hello-maksim-smirnov"
       url: "https://www.linkedin.com/in/hello-maksim-smirnov"
-- key: Profiles
-  value:
-    - value: GitHub
-      url: https://github.com/smirnoffmg
-    - value: Leetcode
-      url: https://leetcode.com/smirnoffmg/
+    - key: CV
+      value: "Google Docs link"
+      url: "https://docs.google.com/document/d/e/2PACX-1vQsDQbk61U0PHuywO4sdUhl6kquiLbG4C_lMlL8KE7YJ-0ALDY3wuiY3STpw79Frg/pub"
+# - key: Profiles
+#   value:
+#     - value: GitHub
+#       url: https://github.com/smirnoffmg
+#     - value: Leetcode
+#       url: https://leetcode.com/smirnoffmg/
