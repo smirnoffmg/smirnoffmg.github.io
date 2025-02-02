@@ -25,7 +25,13 @@
     - key: CV
       value: "Google Docs link"
       url: "https://docs.google.com/document/d/e/2PACX-1vQsDQbk61U0PHuywO4sdUhl6kquiLbG4C_lMlL8KE7YJ-0ALDY3wuiY3STpw79Frg/pub"
-# - key: Profiles
+- key: "Other"
+  value:
+    - key: "Blog 📝"
+      value: "dev.to/smirnoffmg"
+      url: "https://dev.to/smirnoffmg"
+
+      # - key: Profiles
 #   value:
 #     - value: GitHub
 #       url: https://github.com/smirnoffmg
