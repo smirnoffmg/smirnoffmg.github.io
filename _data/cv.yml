@@ -1,0 +1,16 @@
+sections:
+  - title: Education
+    entries:
+      - title: "ITMO"
+        sub: "Bachelor, Information Security"
+        location: "Saint-Petersburb, Russia"
+        dates: "2020"
+        bullets:
+          - "GPA 4.0"
+  - title: Experience
+    entries:
+      - title: "Principal Technical Lead · Raiffeisen"
+        location: "Moscow, Russia"
+        dates: "2023-..."
+        bullets:
+          - "What you did, impact, etc."

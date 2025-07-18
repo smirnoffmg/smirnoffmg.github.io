@@ -1,15 +1,21 @@
 title: Maksim Smirnov
-description: Python Expert and AWS Architect
 email: smirnoffmg@gmail.com
 baseurl: ""
 url: https://smirnoffmg.github.io
 github_username: smirnoffmg
+phone: "(911) 037-77-78"
+website: "smirnoffmg@gmail.com"
+department: "Your Department, University, City, Country"
+affiliation: "Optional: Additional affiliation or department"
+linkedin: "https://www.linkedin.com/in/hello-maksim-smirnov"
+description: "Harvard‑style CV • Example"
 
 google_analytics: G-4HG9NVZRVF
 linkedin_username: smirnov-maksim-spb
 author: Maksim Smirnov
 
-remote_theme: smirnoffmg/hacked-jekyll-with-ga
+# remote_theme: smirnoffmg/hacked-jekyll-with-ga
+remote_theme: smirnoffmg/harvard-style-cv-theme
 
 color_bg: var(--oc-indigo-8)
 color_punct: black
