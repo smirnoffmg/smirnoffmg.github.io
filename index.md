@@ -1,3 +1,4 @@
----
-layout: home
----
+   ---
+   layout: cv
+   title: CV
+   ---
