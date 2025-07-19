@@ -1,7 +1,6 @@
 author: Maksim Smirnov
 
 title: Maksim Smirnov
-email: smirnoffmg@gmail.com
 
 baseurl: ""
 
@@ -9,11 +8,11 @@ url: https://smirnoffmg.github.io
 github_username: smirnoffmg
 
 # Contact info
-website: "smirnoffmg@gmail.com"
+email: "smirnoffmg@gmail.com"
 linkedin: "hello-maksim-smirnov"
 github: smirnoffmg
 telegram: not_again_please
-description: "Harvard‑style CV • Example"
+description: "Maksim Smirnov CV"
 
 # Google Analytics
 google_analytics: G-4HG9NVZRVF
