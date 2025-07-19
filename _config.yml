@@ -1,26 +1,22 @@
-title: Maksim Smirnov
-email: smirnoffmg@gmail.com
-baseurl: ""
-url: https://smirnoffmg.github.io
-github_username: smirnoffmg
-phone: "(911) 037-77-78"
-website: "smirnoffmg@gmail.com"
-department: "Your Department, University, City, Country"
-affiliation: "Optional: Additional affiliation or department"
-linkedin: "https://www.linkedin.com/in/hello-maksim-smirnov"
-description: "Harvard‑style CV • Example"
-
-google_analytics: G-4HG9NVZRVF
-linkedin_username: smirnov-maksim-spb
 author: Maksim Smirnov
 
-# remote_theme: smirnoffmg/hacked-jekyll-with-ga
+title: Maksim Smirnov
+email: smirnoffmg@gmail.com
+
+baseurl: ""
+
+url: https://smirnoffmg.github.io
+github_username: smirnoffmg
+
+# Contact info
+website: "smirnoffmg@gmail.com"
+linkedin: "hello-maksim-smirnov"
+github: smirnoffmg
+telegram: not_again_please
+description: "Harvard‑style CV • Example"
+
+# Google Analytics
+google_analytics: G-4HG9NVZRVF
+
+# Remote theme
 remote_theme: smirnoffmg/harvard-style-cv-theme
-
-color_bg: var(--oc-indigo-8)
-color_punct: black
-color_keyval: "#fff"
-color_hover: "#cc5de8"
-
-exclude:
-  - README.md

@@ -1,4 +1,4 @@
-   ---
-   layout: cv
-   title: CV
-   ---
+---
+layout: cv
+title: CV
+---
