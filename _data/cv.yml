@@ -4,9 +4,8 @@ sections:
       - title: "ITMO University"
         sub: "Bachelor in Information Security"
         location: "Saint Petersburg, Russia"
-        dates: "2020"
         bullets:
-          - "Completed bachelor’s degree with focus on information security and secure systems development."
+          - "Thesis: Neural network for detecting steganographic content in images"
 
   - title: Certifications
     entries:
@@ -46,7 +45,7 @@ sections:
           - "Led agile teams of 8–9 developers across pharmaceutical software projects."
           - "Founded and instructed Python Competence Centre; delivered technical lectures and practical workshops."
           - "Designed and managed technical hiring processes, significantly expanding talent pool."
-      - title: "Founder & Lead Python Developer · Aglaya"
+      - title: "Co-Founder & Lead Python Developer · Aglaya"
         dates: "2014–2018"
         bullets:
           - "Established and managed a team of 10 software engineers."
