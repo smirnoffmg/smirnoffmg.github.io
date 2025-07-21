@@ -1,9 +1,16 @@
 sections:
   - title: Education
     entries:
+      - title: "MIPT University"
+        sub: "Master in Data Science"
+        location: "Moscow, Russia"
+        dates: "In progress"
+        bullets:
+          - "Advanced coursework and research in data science and machine learning."
+
       - title: "ITMO University"
         sub: "Bachelor in Information Security"
-        location: "Saint Petersburg, Russia"
+        location: "Saint-Petersburg, Russia"
         bullets:
           - "Thesis: Neural network for detecting steganographic content in images"
 
@@ -19,17 +26,17 @@ sections:
   - title: Experience
     entries:
       - title: "Principal Technical Lead · Raiffeisenbank"
-        dates: "2024–present"
+        dates: "2024 - present"
         bullets:
           - "Directed development of enterprise-scale credit automation platform; managed six engineering teams."
           - "Transitioned system to event-driven architecture, increasing Kubernetes resource usage from 15% to 60%."
           - "Reduced credit approval process from 3 days to less than 24 hours."
       - title: "Senior Software Engineer · Yandex"
-        dates: "2022–2023"
+        dates: "2022 - 2023"
         bullets:
           - "Collaborated on Python open-source group; engineered infrastructure automation solutions."
       - title: "Engineering Manager · Runity"
-        dates: "2022–2023"
+        dates: "2022 - 2023"
         bullets:
           - "Enhanced project estimation accuracy, reducing variance by 10–15%."
           - "Attained zero employee attrition while delivering six previously stalled projects."
@@ -40,13 +47,13 @@ sections:
           - "Streamlined codebase by 50%, decreasing release cycle time from days to hours."
           - "Led architectural redesign and Python modernization; expanded product reach into new regions."
       - title: "Lead Software Developer · EPAM Systems"
-        dates: "2018–2021"
+        dates: "2018 - 2021"
         bullets:
           - "Led agile teams of 8–9 developers across pharmaceutical software projects."
           - "Founded and instructed Python Competence Centre; delivered technical lectures and practical workshops."
           - "Designed and managed technical hiring processes, significantly expanding talent pool."
       - title: "Co-Founder & Lead Python Developer · Aglaya"
-        dates: "2014–2018"
+        dates: "2014 - 2018"
         bullets:
           - "Established and managed a team of 10 software engineers."
           - "Conceived and delivered bespoke information systems; optimized client engagement and development workflows."
@@ -56,16 +63,33 @@ sections:
       - title: "Python Competence Centre"
         sub: "Founder & Instructor"
         location: "EPAM Systems"
-        dates: "2018–2021"
+        dates: "2018 - 2021"
         bullets:
           - "Developed curriculum and facilitated hands-on training for Python developers."
           - "Raised team proficiency and standardized technical evaluation protocols."
-      - title: "Credit Automation Platform"
-        sub: "Principal Technical Lead"
-        location: "Raiffeisenbank"
-        dates: "2024–present"
+      - title: "Metrics: Jira Engineering Analytics Toolkit"
+        sub: "Author & Maintainer"
+        location: "Open Source"
+        dates: "2023 - present"
         bullets:
-          - "Architected and launched a platform minimizing credit decision latency and maximizing resources usage efficiency."
+          - "Open-source toolkit for analyzing and visualizing software engineering metrics from Jira."
+          - "Calculates cycle time, lead time, queue time, throughput, and more."
+          - "Modular, extensible, and fully tested."
+
+  - title: Publications
+    entries:
+      - title: "Software engineering metrics"
+        sub: "Medium, 2024"
+        bullets:
+          - "Describes practical metrics for software teams using Jira data."
+          - "Shows how to identify bottlenecks and visualize delivery trends."
+          - "Discusses using metrics for forecasting and process improvement."
+      - title: "Profiling Asynchronous Python"
+        sub: "Medium, 2023"
+        bullets:
+          - "Overview of async Python bottlenecks: blocking, sequential calls, context switching, starvation, memory."
+          - "Compares deterministic and statistical profilers, highlighting the strengths of tools like scalene for async code."
+          - "Provides practical advice for interpreting profiler results and optimizing async Python applications."
 
   - title: Skills
     entries:
