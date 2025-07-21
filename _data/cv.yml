@@ -87,7 +87,7 @@ sections:
       - title: "Profiling Asynchronous Python"
         sub: "Medium, 2023"
         bullets:
-          - "Overview of async Python bottlenecks: blocking, sequential calls, context switching, starvation, memory."
+          - "Overview of async Python bottlenecks: blocking calls, memory overhead,context switching etc."
           - "Compares deterministic and statistical profilers, highlighting the strengths of tools like scalene for async code."
           - "Provides practical advice for interpreting profiler results and optimizing async Python applications."
 
