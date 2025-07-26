@@ -95,36 +95,19 @@ sections:
     entries:
       - title: "Programming Languages"
         bullets:
-          - "Python"
-          - "Go"
-          - "C++"
-          - "Clojure"
+          - "Python, Go, C++, Clojure"
       - title: "Databases"
         bullets:
-          - "PostgreSQL"
-          - "MongoDB"
-          - "Redis"
+          - "PostgreSQL, MongoDB, Redis"
       - title: "Cloud & DevOps"
         bullets:
-          - "AWS"
-          - "Docker"
-          - "Kubernetes"
-          - "Helm"
-          - "Terraform"
-          - "Gitlab CI/CD"
+          - "AWS, Docker, Kubernetes, Helm, Terraform, Gitlab CI/CD"
       - title: "Frameworks & Tools"
         bullets:
-          - "Django"
-          - "FastAPI"
-          - "LiteStar"
-          - "Pytorch"
-          - "Langchain"
-          - "Ollama"
+          - "LiteStar, Gin, FastAPI, Django, Pytorch, Langchain, Ollama"
       - title: "Languages"
         bullets:
-          - "Russian (Native)"
-          - "English (Fluent)"
-          - "German (Beginner)"
+          - "English (Fluent), German (Beginner), Russian (Native)"
 
   - title: References
     entries:
