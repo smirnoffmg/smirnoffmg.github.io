@@ -4,92 +4,96 @@ sections:
       - title: "MIPT University"
         sub: "Master in Data Science"
         location: "Moscow, Russia"
-        dates: "In progress"
         bullets:
-          - "Advanced coursework and research in data science and machine learning."
+          - "Working on advanced coursework and research in data science and machine learning."
 
       - title: "ITMO University"
         sub: "Bachelor in Information Security"
-        location: "Saint-Petersburg, Russia"
+        location: "Saint Petersburg, Russia"
         bullets:
-          - "Thesis: Neural network for detecting steganographic content in images"
+          - "Thesis: Developed a neural network for detecting steganographic content in digital images."
 
   - title: Certifications
     entries:
       - title: "AWS Certified Solutions Architect"
         bullets:
-          - "Expertise in designing and deploying scalable systems on AWS."
+          - "Validated expertise in designing and deploying scalable cloud systems on AWS."
       - title: "IELTS 7.5"
         bullets:
-          - "Certified English language proficiency (Fluent)."
+          - "Certified English language proficiency at fluent level."
 
   - title: Experience
     entries:
-      - title: "Principal Technical Lead · Raiffeisenbank"
-        dates: "2024 - present"
+      - title: "Principal Technical Lead, Raiffeisenbank"
+        dates: "2024 – Present"
         bullets:
-          - "Directed development of enterprise-scale credit automation platform; managed six engineering teams."
-          - "Transitioned system to event-driven architecture, increasing Kubernetes resource usage from 15% to 60%."
-          - "Reduced credit approval process from 3 days to less than 24 hours."
-      - title: "Senior Software Engineer · Yandex"
-        dates: "2022 - 2023"
+          - "Directed the development of an enterprise-scale credit automation platform, overseeing six engineering teams."
+          - "Architected and executed the transition to an event-driven system, reducing Kubernetes infrastructure costs by 30 percent."
+          - "Shortened the credit approval process from three days to less than 24 hours."
+
+      - title: "Senior Software Engineer, Yandex"
+        dates: "2022 – 2023"
         bullets:
-          - "Collaborated on Python open-source group; engineered infrastructure automation solutions."
-      - title: "Engineering Manager · Runity"
-        dates: "2022 - 2023"
+          - "Contributed to Python open-source projects and engineered infrastructure automation solutions."
+
+      - title: "Engineering Manager, Runity"
+        dates: "2022 – 2023"
         bullets:
-          - "Enhanced project estimation accuracy, reducing variance by 10–15%."
-          - "Attained zero employee attrition while delivering six previously stalled projects."
-          - "Launched company-sponsored technical training initiatives."
-      - title: "Engineering Manager · Metamap"
+          - "Improved project estimation accuracy, reducing variance by 10 to 15 percent."
+          - "Achieved zero employee attrition while delivering six previously stalled projects."
+          - "Established and launched company-sponsored technical training programs."
+
+      - title: "Engineering Manager, Metamap"
         dates: "2022"
         bullets:
-          - "Streamlined codebase by 50%, decreasing release cycle time from days to hours."
-          - "Led architectural redesign and Python modernization; expanded product reach into new regions."
-      - title: "Lead Software Developer · EPAM Systems"
-        dates: "2018 - 2021"
+          - "Reduced codebase size by 50 percent, accelerating release cycles from several days to a few hours."
+          - "Redesigned the architecture from monolith to microservices and modernized the Python stack, enabling product expansion into Latin America and Singapore."
+
+      - title: "Lead Software Developer, EPAM Systems"
+        dates: "2018 – 2021"
         bullets:
-          - "Led agile teams of 8–9 developers across pharmaceutical software projects."
-          - "Founded and instructed Python Competence Centre; delivered technical lectures and practical workshops."
-          - "Designed and managed technical hiring processes, significantly expanding talent pool."
-      - title: "Co-Founder & Lead Python Developer · Aglaya"
-        dates: "2014 - 2018"
+          - "Led agile teams of 8 to 9 developers on pharmaceutical software projects."
+          - "Founded and managed a Python Competence Center, delivering technical lectures and practical workshops."
+          - "Designed and implemented technical hiring processes, significantly expanding the talent pool."
+
+      - title: "Co-Founder and Lead Python Developer, Aglaya"
+        dates: "2014 – 2018"
         bullets:
           - "Established and managed a team of 10 software engineers."
-          - "Conceived and delivered bespoke information systems; optimized client engagement and development workflows."
+          - "Designed and delivered custom information systems, improving client engagement and development workflows."
 
   - title: Projects
     entries:
-      - title: "Python Competence Centre"
-        sub: "Founder & Instructor"
+      - title: "Python Competence Center"
+        sub: "Founder and Instructor"
         location: "EPAM Systems"
-        dates: "2018 - 2021"
+        dates: "2018 – 2021"
         bullets:
           - "Developed curriculum and facilitated hands-on training for Python developers."
-          - "Raised team proficiency and standardized technical evaluation protocols."
+          - "Increased team proficiency and standardized technical evaluation protocols."
       - title: "Metrics: Jira Engineering Analytics Toolkit"
-        sub: "Author & Maintainer"
+        sub: "Author and Maintainer"
         location: "Open Source"
-        dates: "2023 - present"
+        dates: "2023 – Present"
         bullets:
-          - "Open-source toolkit for analyzing and visualizing software engineering metrics from Jira."
-          - "Calculates cycle time, lead time, queue time, throughput, and more."
-          - "Modular, extensible, and fully tested."
+          - "Created an open-source toolkit for analyzing and visualizing software engineering metrics from Jira."
+          - "Implemented calculations for cycle time, lead time, queue time, throughput, and other key metrics."
+          - "Designed the toolkit to be modular, extensible, and fully tested."
 
   - title: Publications
     entries:
-      - title: "Software engineering metrics"
+      - title: "Software Engineering Metrics"
         sub: "Medium, 2024"
         bullets:
-          - "Describes practical metrics for software teams using Jira data."
-          - "Shows how to identify bottlenecks and visualize delivery trends."
-          - "Discusses using metrics for forecasting and process improvement."
+          - "Outlined practical metrics for software teams using Jira data."
+          - "Demonstrated methods to identify bottlenecks and visualize delivery trends."
+          - "Explained how to use metrics for forecasting and process improvement."
       - title: "Profiling Asynchronous Python"
         sub: "Medium, 2023"
         bullets:
-          - "Overview of async Python bottlenecks: blocking calls, memory overhead,context switching etc."
-          - "Compares deterministic and statistical profilers, highlighting the strengths of tools like scalene for async code."
-          - "Provides practical advice for interpreting profiler results and optimizing async Python applications."
+          - "Described common performance bottlenecks in asynchronous Python applications, including blocking calls and context switching."
+          - "Compared deterministic and statistical profilers, highlighting strengths of tools such as Scalene for async code."
+          - "Provided guidance on interpreting profiler results and optimizing asynchronous Python performance."
 
   - title: Skills
     entries:
@@ -99,12 +103,12 @@ sections:
       - title: "Databases"
         bullets:
           - "PostgreSQL, MongoDB, Redis"
-      - title: "Cloud & DevOps"
+      - title: "Cloud and DevOps"
         bullets:
-          - "AWS, Docker, Kubernetes, Helm, Terraform, Gitlab CI/CD"
-      - title: "Frameworks & Tools"
+          - "AWS, Docker, Kubernetes, Helm, Terraform, GitLab CI/CD (Continuous Integration and Continuous Delivery)"
+      - title: "Frameworks and Tools"
         bullets:
-          - "LiteStar, Gin, FastAPI, Django, Pytorch, Langchain, Ollama"
+          - "LiteStar, Gin, FastAPI, Django, PyTorch, LangChain, Ollama"
       - title: "Languages"
         bullets:
           - "English (Fluent), German (Beginner), Russian (Native)"
