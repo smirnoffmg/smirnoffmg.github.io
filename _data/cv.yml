@@ -5,7 +5,7 @@ sections:
         sub: "Master in Data Science"
         location: "Moscow, Russia"
         bullets:
-          - "Working on advanced coursework and research in data science and machine learning."
+          - "Detection of Cheating in Online Learning via Analysis of Digital Traces"
 
       - title: "ITMO University"
         sub: "Bachelor in Information Security"
