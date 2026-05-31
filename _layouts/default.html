@@ -9,20 +9,63 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Maksim Smirnov",
-      "jobTitle": "Principal Technical Lead & Software Engineer",
-      "email": "smirnoffmg@gmail.com",
-      "url": "https://smirnoffmg.github.io",
-      "sameAs": [
-        "https://www.linkedin.com/in/hello-maksim-smirnov",
-        "https://github.com/smirnoffmg",
-        "https://t.me/smirnov_maksim_grigorevich"
-      ],
-      "knowsAbout": ["Python", "Go", "AWS", "Kubernetes", "Software Architecture", "Engineering Leadership"]
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://smirnoffmg.github.io/#person",
+          "name": "Maksim Smirnov",
+          "jobTitle": "Principal Technical Lead & Software Engineer",
+          "email": "smirnoffmg@gmail.com",
+          "url": "https://smirnoffmg.github.io",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "RS",
+            "addressLocality": "Serbia"
+          },
+          "sameAs": [
+            "https://www.linkedin.com/in/hello-maksim-smirnov",
+            "https://github.com/smirnoffmg",
+            "https://t.me/smirnov_maksim_grigorevich"
+          ],
+          "knowsAbout": [
+            "Python", "Go", "AWS", "Kubernetes", "Kafka", "gRPC", "REST",
+            "Microservices", "Event-Driven Architecture", "Distributed Systems",
+            "Software Architecture", "Engineering Leadership", "Mentoring",
+            "CI/CD", "Prometheus", "Grafana", "Terraform", "System Design"
+          ]
+        },
+        {
+          "@type": "ProfilePage",
+          "@id": "https://smirnoffmg.github.io/#profilepage",
+          "name": "Maksim Smirnov — CV",
+          "url": "https://smirnoffmg.github.io",
+          "description": "CV and professional profile of Maksim Smirnov, Principal Technical Lead and Software Engineer specialising in Python, Go, event-driven architecture, and engineering leadership.",
+          "mainEntity": { "@id": "https://smirnoffmg.github.io/#person" }
+        }
+      ]
     }
     </script>
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    <style>
+      .cv-print-btn {
+        position: fixed;
+        top: 1.2rem;
+        right: 1.2rem;
+        padding: 0.45rem 1rem;
+        font-size: 0.8rem;
+        font-family: inherit;
+        background: #222;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        z-index: 100;
+        opacity: 0.75;
+        transition: opacity 0.15s;
+      }
+      .cv-print-btn:hover { opacity: 1; }
+      @media print { .cv-print-btn { display: none; } }
+    </style>
 
     {% if site.google_analytics %}
     <!-- Google Analytics -->
@@ -62,6 +105,7 @@
 </head>
 
 <body>
+    <button class="cv-print-btn" onclick="window.print()">Save as PDF</button>
     <main>
         {{ content }}
     </main>

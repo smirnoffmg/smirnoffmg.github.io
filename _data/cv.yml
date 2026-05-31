@@ -2,7 +2,7 @@ sections:
   - title: Summary
     entries:
       - bullets:
-          - "Principal Technical Lead and Software Engineer with 10+ years of experience building production systems and leading engineering teams. Specializes in Python, Go, cloud architecture on AWS, and event-driven distributed systems. Currently directing credit automation platform development at Raiffeisenbank."
+          - "Cut credit approval time from 3 days to 24 hours and reduced Kubernetes infrastructure costs by 30% as Principal Technical Lead at Raiffeisenbank. 10+ years designing event-driven distributed systems and leading multi-team engineering organisations in fintech, enterprise, and startup environments. Based in Serbia — remote-first, EU-friendly hours. Open to Staff/Principal Engineer or Engineering Manager roles."
 
   - title: Education
     entries:
@@ -32,40 +32,43 @@ sections:
       - title: "Principal Technical Lead, Raiffeisenbank"
         dates: "2024 – Present"
         bullets:
-          - "Directed the development of an enterprise-scale credit automation platform, overseeing six engineering teams."
-          - "Architected and executed the transition to an event-driven system, reducing Kubernetes infrastructure costs by 30 percent."
-          - "Shortened the credit approval process from three days to less than 24 hours."
+          - "Directed development of an enterprise-scale credit automation platform, coordinating six engineering teams across microservices and event-driven architecture (Kafka, gRPC, REST)."
+          - "Architected migration to event-driven system with Kafka, reducing Kubernetes infrastructure costs by 30% and improving system observability via Prometheus and Grafana."
+          - "Shortened credit approval time from 3 days to under 24 hours through pipeline redesign and CI/CD automation."
+          - "Mentored senior engineers and defined hiring criteria and technical interview process for team scaling."
 
       - title: "Senior Software Engineer, Yandex"
         dates: "2022 – 2023"
         bullets:
-          - "Contributed to Python open-source projects and engineered infrastructure automation solutions."
+          - "Maintained Python library porting pipeline for Yandex's air-gapped internal package ecosystem: evaluated upstream OSS packages, authored compatibility patches, and integrated them into Yandex's proprietary VCS and package registry."
+          - "Engineered automation tooling to reduce manual overhead in the import and patching workflow, enabling internal teams to track and adopt new upstream releases reliably."
 
       - title: "Engineering Manager, Runity"
         dates: "2022 – 2023"
+        sub: "contract, concurrent"
         bullets:
-          - "Improved project estimation accuracy, reducing variance by 10 to 15 percent."
-          - "Achieved zero employee attrition while delivering six previously stalled projects."
-          - "Established and launched company-sponsored technical training programs."
+          - "Improved project estimation accuracy, reducing variance by 10–15% through structured planning and delivery observability."
+          - "Achieved zero attrition while delivering six previously stalled projects by establishing clear ownership and mentoring practices."
+          - "Founded and launched company-sponsored technical training programs."
 
       - title: "Engineering Manager, Metamap"
         dates: "2022"
+        sub: "contract, concurrent"
         bullets:
-          - "Reduced codebase size by 50 percent, accelerating release cycles from several days to a few hours."
-          - "Redesigned the architecture from monolith to microservices and modernized the Python stack, enabling product expansion into Latin America and Singapore."
+          - "Reduced codebase by 50%, cutting release cycles from several days to hours via microservices decomposition and CI/CD pipeline overhaul."
+          - "Led architectural migration from monolith to microservices (Python, REST, Docker/Kubernetes), enabling product expansion into Latin America and Singapore."
 
       - title: "Lead Software Developer, EPAM Systems"
         dates: "2018 – 2021"
         bullets:
-          - "Led agile teams of 8 to 9 developers on pharmaceutical software projects."
-          - "Founded and managed a Python Competence Center, delivering technical lectures and practical workshops."
-          - "Designed and implemented technical hiring processes, significantly expanding the talent pool."
+          - "Led agile teams of 8–9 developers on pharmaceutical software projects, managing delivery, code quality, and stakeholder communication."
+          - "Founded and ran a Python Competence Center, delivering technical lectures, workshops, and mentoring to 100+ engineers."
+          - "Designed technical hiring and assessment frameworks, significantly expanding the engineering talent pool."
 
       - title: "Co-Founder and Lead Python Developer, Aglaya"
         dates: "2014 – 2018"
         bullets:
-          - "Established and managed a team of 10 software engineers."
-          - "Designed and delivered custom information systems, improving client engagement and development workflows."
+          - "Co-founded and led a team of 10 engineers, delivering custom information systems for enterprise clients."
 
   - title: Projects
     entries:
@@ -113,10 +116,16 @@ sections:
           - "PostgreSQL, MongoDB, Redis"
       - title: "Cloud and DevOps"
         bullets:
-          - "AWS, Docker, Kubernetes, Helm, Terraform, GitLab CI/CD (Continuous Integration and Continuous Delivery)"
+          - "AWS, Docker, Kubernetes, Helm, Terraform, GitLab CI/CD, Prometheus, Grafana"
+      - title: "Messaging and APIs"
+        bullets:
+          - "Kafka, RabbitMQ, gRPC, REST"
       - title: "Frameworks and Tools"
         bullets:
           - "LiteStar, Gin, FastAPI, Django, PyTorch, LangChain, Ollama"
+      - title: "Practices"
+        bullets:
+          - "System Design, Distributed Systems Architecture, Technical Leadership, Mentoring, Hiring"
       - title: "Languages"
         bullets:
           - "English (Fluent), German (Beginner), Russian (Native)"
