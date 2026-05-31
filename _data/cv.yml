@@ -87,7 +87,7 @@ sections:
           - "Created an open-source toolkit for analyzing and visualizing software engineering metrics from Jira."
           - "Implemented calculations for cycle time, lead time, queue time, throughput, and other key metrics."
           - "Designed the toolkit to be modular, extensible, and fully tested."
-          - "Source: https://github.com/smirnoffmg/metrics"
+          - "[Source on GitHub](https://github.com/smirnoffmg/metrics)"
 
   - title: Publications
     entries:
@@ -97,14 +97,14 @@ sections:
           - "Outlined practical metrics for software teams using Jira data."
           - "Demonstrated methods to identify bottlenecks and visualize delivery trends."
           - "Explained how to use metrics for forecasting and process improvement."
-          - "Read on Medium: https://medium.com/@smirnoffmg/software-engineering-metrics-b6c4b37b5fd2"
+          - "[Read on Medium](https://medium.com/@smirnoffmg/software-engineering-metrics-b6c4b37b5fd2)"
       - title: "Profiling Asynchronous Python"
         sub: "Medium, 2023"
         bullets:
           - "Described common performance bottlenecks in asynchronous Python applications, including blocking calls and context switching."
           - "Compared deterministic and statistical profilers, highlighting strengths of tools such as Scalene for async code."
           - "Provided guidance on interpreting profiler results and optimizing asynchronous Python performance."
-          - "Read on Medium: https://medium.com/@smirnoffmg/profiling-asynchronous-python-b73cde75aa2d"
+          - "[Read on Medium](https://medium.com/@smirnoffmg/profiling-asynchronous-python-b73cde75aa2d)"
 
   - title: Skills
     entries:
