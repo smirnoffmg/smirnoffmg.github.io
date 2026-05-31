@@ -14,6 +14,7 @@ linkedin: "hello-maksim-smirnov"
 github: smirnoffmg
 telegram: "smirnov_maksim_grigorevich"
 description: "Principal Technical Lead and Software Engineer with 10+ years of experience in Python, Go, cloud architecture (AWS), and engineering leadership. Currently at Raiffeisenbank."
+image: https://github.com/smirnoffmg.png
 
 plugins:
   - jekyll-sitemap
