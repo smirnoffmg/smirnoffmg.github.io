@@ -1,6 +1,7 @@
 author: Maksim Smirnov
 
 title: Maksim Smirnov
+tagline: "Principal Technical Lead & Software Engineer"
 
 baseurl: ""
 
@@ -12,7 +13,10 @@ email: "smirnoffmg@gmail.com"
 linkedin: "hello-maksim-smirnov"
 github: smirnoffmg
 telegram: "smirnov_maksim_grigorevich"
-description: "Maksim Smirnov CV"
+description: "Principal Technical Lead and Software Engineer with 10+ years of experience in Python, Go, cloud architecture (AWS), and engineering leadership. Currently at Raiffeisenbank."
+
+plugins:
+  - jekyll-sitemap
 
 # Google Analytics
 google_analytics: G-4HG9NVZRVF
