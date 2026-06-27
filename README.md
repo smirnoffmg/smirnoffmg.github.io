@@ -1,47 +1,34 @@
-# Maksim Smirnov CV Site
+# Maksim Smirnov — Personal Site
 
-This is a personal CV/portfolio site built with Jekyll and a remote Harvard-style CV theme.
+Portfolio / CV site for [smirnoffmg.dev](https://smirnoffmg.dev), built with Jekyll and deployed via GitHub Pages.
 
 Да, я пишу себе документацию, эта привычка сильнее меня :)
 
-## Local Development
+## Project Structure
 
-To preview and develop the site locally:
+- `_config.yml` — site configuration (author, URL, analytics, remote theme)
+- `_data/cv.yml` — CV data; edit this to update resume content
+- `index.html` — main page (self-contained HTML with inline styles)
+- `_layouts/default.html` — base HTML layout
+- `404.md` — custom 404 page
+- `cv_ptl.pdf` — downloadable PDF resume
+- `favicon.svg` — site favicon
+
+## Local Development
 
 1. **Install dependencies** (first time only):
    ```sh
    bundle install
    ```
 
-2. **Run the local server and watch for changes:**
+2. **Run the dev server with live reload:**
    ```sh
    bundle exec jekyll serve --livereload
    ```
-   - The site will be available at [http://localhost:4000](http://localhost:4000)
-   - The server will automatically reload when you save changes to your files.
+   Site available at [http://localhost:4000](http://localhost:4000).
 
-## LiveReload Feature
-
-- **LiveReload** automatically refreshes your browser when you edit most files (content, data, etc.).
-- **To use LiveReload:**
-  1. Start the server with `--livereload` (see above).
-  2. Open [http://localhost:4000](http://localhost:4000) in your browser.
-  3. Edit your files and see changes instantly.
-- **_config.yml changes:**
-  - If you change `_config.yml`, you must manually restart the server:
-    1. Stop the server (`Ctrl+C` in terminal).
-    2. Run `bundle exec jekyll serve --livereload` again.
-  - This is because Jekyll only reads configuration at startup.
-
-## Project Structure
-- `_config.yml` — Site configuration
-- `_data/cv.yml` — CV data (edit this to update your resume)
-- `index.md` — Main page
-- `404.md` — Custom 404 page
-
-## Notes
-- The site uses a remote theme: `smirnoffmg/harvard-style-cv-theme`
-- No need to install or manage the theme manually; it is pulled automatically.
+> **Note:** Changes to `_config.yml` require a server restart — Jekyll only reads config at startup.
 
 ## Deployment
-- The site is designed for GitHub Pages, but you can use any static hosting provider.
+
+Pushes to `main` deploy automatically via GitHub Pages.
