@@ -1,0 +1,698 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ site.author }} — Principal Technical Lead</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "{{ site.url }}/#person",
+      "name": "{{ site.author }}",
+      "jobTitle": "Principal Technical Lead & Software Engineer",
+      "email": "{{ site.email }}",
+      "url": "{{ site.url }}",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "RS",
+        "addressLocality": "Serbia"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/{{ site.linkedin }}",
+        "https://github.com/{{ site.github }}",
+        "https://t.me/{{ site.telegram }}"
+      ]
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": "{{ site.url }}/#profilepage",
+      "name": "{{ site.author }} — Portfolio",
+      "url": "{{ site.url }}",
+      "description": "{{ site.description }}",
+      "mainEntity": { "@id": "{{ site.url }}/#person" }
+    }
+  ]
+}
+</script>
+
+  {% if site.google_analytics %}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', '{{ site.google_analytics }}');
+  </script>
+  {% endif %}
+
+  {% if site.yandex_metrika %}
+  <script type="text/javascript">
+    (function (m, e, t, r, i, k, a) {
+      m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+      m[i].l = 1 * new Date();
+      for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
+      k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+    })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js?id={{ site.yandex_metrika }}', 'ym');
+    ym({{ site.yandex_metrika }}, 'init', { ssr: true, webvisor: true, clickmap: true, accurateTrackBounce: true, trackLinks: true });
+  </script>
+  <noscript>
+    <div><img src="https://mc.yandex.ru/watch/{{ site.yandex_metrika }}" style="position:absolute;left:-9999px;" alt="">
+    </div>
+  </noscript>
+  {% endif %}
+
+  <script src="/support.js"></script>
+</head>
+
+<body>
+
+  {% assign summary_section = site.data.cv.sections | where: "title", "Summary" | first %}
+  {% assign experience_section = site.data.cv.sections | where: "title", "Experience" | first %}
+  {% assign contracts_section = site.data.cv.sections | where: "title", "Selected Contract Engagements" | first %}
+  {% assign projects_section = site.data.cv.sections | where: "title", "Open Source & Projects" | first %}
+  {% assign publications_section = site.data.cv.sections | where: "title", "Publications" | first %}
+  {% assign education_section = site.data.cv.sections | where: "title", "Education" | first %}
+  {% assign certs_section = site.data.cv.sections | where: "title", "Certifications" | first %}
+  {% assign skills_section = site.data.cv.sections | where: "title", "Skills" | first %}
+  {% assign first_exp = experience_section.entries[0] %}
+  {% assign first_exp_parts = first_exp.title | split: ", " %}
+  {% assign hero_role = first_exp_parts[0] %}
+  {% assign hero_company = first_exp_parts[1] %}
+  {% assign hero_bio = summary_section.entries[0].bullets[0] %}
+  {% assign lang_entry = skills_section.entries | where: "title", "Languages" | first %}
+  {% assign lang_items = lang_entry.bullets[0] | split: ", " %}
+
+  <x-dc>
+    <helmet>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+      <style>
+        :root {
+          --paper: #F7F3EC;
+          --paper-soft: #EFE8DB;
+          --ink: #1B1A17;
+          --ink-soft: #34322C;
+          --muted: #746F62;
+          --line: #E2DBCD;
+          --accent: #AE4A2C;
+        }
+
+        * {
+          box-sizing: border-box;
+        }
+
+        html,
+        body {
+          margin: 0;
+          padding: 0;
+        }
+
+        body {
+          background: var(--paper);
+          color: var(--ink);
+          font-family: 'Newsreader', Georgia, serif;
+          -webkit-font-smoothing: antialiased;
+          text-rendering: optimizeLegibility;
+        }
+
+        ::selection {
+          background: var(--accent);
+          color: #fff;
+        }
+
+        .cv-link {
+          display: inline-block;
+          margin-top: 12px;
+          font-family: 'IBM Plex Mono', monospace;
+          font-size: 13px;
+          color: var(--ink);
+          text-decoration: none;
+          border-bottom: 1px solid var(--accent);
+          padding-bottom: 2px;
+        }
+
+        .cv-link a {
+          color: inherit;
+          text-decoration: none;
+        }
+
+        .cv-link::after {
+          content: " ↗";
+        }
+
+        @media print {
+          body {
+            background: #fff;
+          }
+
+          .no-print {
+            display: none !important;
+          }
+
+          * {
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+          }
+        }
+      </style>
+    </helmet>
+
+    <div data-screen-label="Portfolio" style="overflow:hidden;">
+
+      <!-- STICKY BAR -->
+      <div class="no-print"
+        style="position:sticky;top:0;z-index:50;background:rgba(247,243,236,0.86);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line);">
+        <div
+          style="max-width:1180px;margin:0 auto;padding:13px 48px;display:flex;align-items:center;gap:20px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;">
+          <span style="font-weight:500;">{{ site.author }}</span>
+          <span style="color:var(--muted);">{{ hero_role }}</span>
+          <span style="margin-left:auto;color:var(--muted);display:flex;align-items:center;gap:8px;"><span
+              style="width:7px;height:7px;border-radius:50%;background:var(--accent);display:inline-block;"></span>{%
+            raw %}{{ availability }}{% endraw %}</span>
+          <a href="/cv_ptl.pdf" target="_blank"
+            style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;background:var(--ink);color:var(--paper);text-decoration:none;padding:8px 14px;cursor:pointer;"
+            style-hover="background:var(--accent);">Save PDF ↗</a>
+        </div>
+      </div>
+
+      <!-- HERO -->
+      <section style="padding:84px 0 72px;">
+        <div style="max-width:1180px;margin:0 auto;padding:0 48px;">
+          <div
+            style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);">
+            <span>bookworm &amp; {{ hero_role }}</span>
+            <span>Belgrade, Serbia · Remote-first</span>
+          </div>
+          <h1
+            style="margin:0.18em 0 0;font-weight:500;font-size:clamp(64px,11.5vw,156px);line-height:0.9;letter-spacing:-0.035em;">
+            Maksim<br>Smirnov</h1>
+
+          <div
+            style="display:grid;grid-template-columns:240px minmax(0,1fr);gap:64px;margin-top:56px;align-items:start;">
+            <div>
+              <div
+                style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;">
+                Currently</div>
+              <div style="font-size:21px;line-height:1.3;">{{ hero_role }},<br><span style="color:var(--accent);">{{
+                  hero_company }}</span></div>
+              <div
+                style="display:flex;flex-direction:column;gap:9px;margin-top:30px;font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:0.02em;">
+                <a href="mailto:{{ site.email }}"
+                  style="color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:3px;width:fit-content;"
+                  style-hover="color:var(--accent);border-color:var(--accent);">{{ site.email }}</a>
+                <a href="https://linkedin.com/in/{{ site.linkedin }}" target="_blank"
+                  style="color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:3px;width:fit-content;"
+                  style-hover="color:var(--accent);border-color:var(--accent);">LinkedIn ↗</a>
+                <a href="https://github.com/{{ site.github }}" target="_blank"
+                  style="color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:3px;width:fit-content;"
+                  style-hover="color:var(--accent);border-color:var(--accent);">GitHub ↗</a>
+                <a href="https://t.me/{{ site.telegram }}" target="_blank"
+                  style="color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:3px;width:fit-content;"
+                  style-hover="color:var(--accent);border-color:var(--accent);">Telegram ↗</a>
+              </div>
+            </div>
+            <div>
+              <p
+                style="margin:0;font-size:clamp(21px,2.5vw,31px);line-height:1.42;font-weight:400;letter-spacing:-0.01em;">
+                {{ hero_bio }}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- IMPACT BAND -->
+      <sc-if value="{% raw %}{{ showImpact }}{% endraw %}" hint-placeholder-val="{% raw %}{{ true }}{% endraw %}">
+        <section style="background:var(--ink);color:var(--paper);padding:80px 0;overflow:hidden;">
+          <div style="max-width:1180px;margin:0 auto;padding:0 48px;">
+            <div
+              style="display:flex;align-items:center;gap:16px;margin-bottom:44px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;">
+              <span>Selected impact</span>
+              <div style="margin-left:auto;display:flex;align-items:center;gap:22px;">
+                <span style="color:rgba(247,243,236,0.6);letter-spacing:0.12em;">{% raw %}{{ counter }}{% endraw
+                  %}</span>
+                <div style="display:flex;gap:8px;">
+                  <button onClick="{% raw %}{{ impactPrev }}{% endraw %}" aria-label="Previous"
+                    style="width:42px;height:42px;border:1px solid rgba(247,243,236,0.25);background:transparent;color:var(--paper);cursor:pointer;font-size:15px;display:flex;align-items:center;justify-content:center;"
+                    style-hover="border-color:var(--accent);color:var(--accent);">←</button>
+                  <button onClick="{% raw %}{{ impactNext }}{% endraw %}" aria-label="Next"
+                    style="width:42px;height:42px;border:1px solid rgba(247,243,236,0.25);background:transparent;color:var(--paper);cursor:pointer;font-size:15px;display:flex;align-items:center;justify-content:center;"
+                    style-hover="border-color:var(--accent);color:var(--accent);">→</button>
+                </div>
+              </div>
+            </div>
+
+            <div style="overflow:hidden;">
+              <div
+                style="display:flex;transition:transform 0.6s cubic-bezier(0.45,0,0.1,1);transform:{% raw %}{{ trackTransform }}{% endraw %};">
+
+                <!-- SLIDE 1 · Platform & cost -->
+                <div style="flex:0 0 100%;min-width:100%;">
+                  <div
+                    style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:18px;transition:transform 0.7s cubic-bezier(0.4,0,0.1,1);transform:{% raw %}{{ eye0 }}{% endraw %};">
+                    Platform &amp; cost — Raiffeisenbank</div>
+                  <p
+                    style="margin:0 0 48px;font-size:clamp(28px,3.6vw,46px);line-height:1.2;font-weight:400;letter-spacing:-0.02em;max-width:20ch;transition:transform 0.65s cubic-bezier(0.4,0,0.1,1);transform:{% raw %}{{ head0 }}{% endraw %};">
+                    Cut credit approval from <em style="font-style:italic;color:var(--accent);">3 days</em> to under <em
+                      style="font-style:italic;color:var(--accent);">24 hours.</em></p>
+                  <div
+                    style="display:grid;grid-template-columns:repeat(3,1fr);gap:40px;border-top:1px solid rgba(247,243,236,0.18);padding-top:40px;">
+                    <div>
+                      <div style="font-size:clamp(40px,5vw,68px);line-height:1;font-weight:500;letter-spacing:-0.03em;">
+                        30<span style="color:var(--accent);">%</span></div>
+                      <div
+                        style="margin-top:12px;font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:1.5;letter-spacing:0.04em;color:rgba(247,243,236,0.66);">
+                        Kubernetes infrastructure cost cut</div>
+                    </div>
+                    <div>
+                      <div style="font-size:clamp(40px,5vw,68px);line-height:1;font-weight:500;letter-spacing:-0.03em;">
+                        6</div>
+                      <div
+                        style="margin-top:12px;font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:1.5;letter-spacing:0.04em;color:rgba(247,243,236,0.66);">
+                        Engineering teams coordinated</div>
+                    </div>
+                    <div>
+                      <div style="font-size:clamp(40px,5vw,68px);line-height:1;font-weight:500;letter-spacing:-0.03em;">
+                        Kafka</div>
+                      <div
+                        style="margin-top:12px;font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:1.5;letter-spacing:0.04em;color:rgba(247,243,236,0.66);">
+                        Event-driven migration &amp; observability</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- SLIDE 2 · Scale & delivery -->
+                <div style="flex:0 0 100%;min-width:100%;">
+                  <div
+                    style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:18px;transition:transform 0.7s cubic-bezier(0.4,0,0.1,1);transform:{% raw %}{{ eye1 }}{% endraw %};">
+                    Scale &amp; delivery — Metamap</div>
+                  <p
+                    style="margin:0 0 48px;font-size:clamp(28px,3.6vw,46px);line-height:1.2;font-weight:400;letter-spacing:-0.02em;max-width:20ch;transition:transform 0.65s cubic-bezier(0.4,0,0.1,1);transform:{% raw %}{{ head1 }}{% endraw %};">
+                    Halved a codebase — releases from <em style="font-style:italic;color:var(--accent);">days</em> to
+                    <em style="font-style:italic;color:var(--accent);">hours.</em>
+                  </p>
+                  <div
+                    style="display:grid;grid-template-columns:repeat(3,1fr);gap:40px;border-top:1px solid rgba(247,243,236,0.18);padding-top:40px;">
+                    <div>
+                      <div style="font-size:clamp(40px,5vw,68px);line-height:1;font-weight:500;letter-spacing:-0.03em;">
+                        50<span style="color:var(--accent);">%</span></div>
+                      <div
+                        style="margin-top:12px;font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:1.5;letter-spacing:0.04em;color:rgba(247,243,236,0.66);">
+                        Codebase reduced via microservices</div>
+                    </div>
+                    <div>
+                      <div style="font-size:clamp(40px,5vw,68px);line-height:1;font-weight:500;letter-spacing:-0.03em;">
+                        2</div>
+                      <div
+                        style="margin-top:12px;font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:1.5;letter-spacing:0.04em;color:rgba(247,243,236,0.66);">
+                        New markets: LatAm &amp; Singapore</div>
+                    </div>
+                    <div>
+                      <div style="font-size:clamp(40px,5vw,68px);line-height:1;font-weight:500;letter-spacing:-0.03em;">
+                        15<span style="color:var(--accent);">%</span></div>
+                      <div
+                        style="margin-top:12px;font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:1.5;letter-spacing:0.04em;color:rgba(247,243,236,0.66);">
+                        Estimation variance reduced</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- SLIDE 3 · People & org -->
+                <div style="flex:0 0 100%;min-width:100%;">
+                  <div
+                    style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:18px;transition:transform 0.7s cubic-bezier(0.4,0,0.1,1);transform:{% raw %}{{ eye2 }}{% endraw %};">
+                    People &amp; org — across roles</div>
+                  <p
+                    style="margin:0 0 48px;font-size:clamp(28px,3.6vw,46px);line-height:1.2;font-weight:400;letter-spacing:-0.02em;max-width:22ch;transition:transform 0.65s cubic-bezier(0.4,0,0.1,1);transform:{% raw %}{{ head2 }}{% endraw %};">
+                    Grew <em style="font-style:italic;color:var(--accent);">100+ engineers</em> and shipped stalled
+                    teams at <em style="font-style:italic;color:var(--accent);">zero attrition.</em></p>
+                  <div
+                    style="display:grid;grid-template-columns:repeat(3,1fr);gap:40px;border-top:1px solid rgba(247,243,236,0.18);padding-top:40px;">
+                    <div>
+                      <div style="font-size:clamp(40px,5vw,68px);line-height:1;font-weight:500;letter-spacing:-0.03em;">
+                        100<span style="color:var(--accent);">+</span></div>
+                      <div
+                        style="margin-top:12px;font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:1.5;letter-spacing:0.04em;color:rgba(247,243,236,0.66);">
+                        Engineers mentored &amp; trained</div>
+                    </div>
+                    <div>
+                      <div style="font-size:clamp(40px,5vw,68px);line-height:1;font-weight:500;letter-spacing:-0.03em;">
+                        0</div>
+                      <div
+                        style="margin-top:12px;font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:1.5;letter-spacing:0.04em;color:rgba(247,243,236,0.66);">
+                        Attrition while shipping 6 projects</div>
+                    </div>
+                    <div>
+                      <div style="font-size:clamp(40px,5vw,68px);line-height:1;font-weight:500;letter-spacing:-0.03em;">
+                        10<span style="color:var(--accent);">+</span></div>
+                      <div
+                        style="margin-top:12px;font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:1.5;letter-spacing:0.04em;color:rgba(247,243,236,0.66);">
+                        Years leading multi-team orgs</div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div style="display:flex;gap:10px;margin-top:44px;">
+              <sc-for list="{% raw %}{{ dots }}{% endraw %}" as="dot" hint-placeholder-count="3">
+                <button onClick="{% raw %}{{ dot.onClick }}{% endraw %}" aria-label="Go to impact slide"
+                  style="width:34px;height:4px;border:none;padding:0;cursor:pointer;background:{% raw %}{{ dot.bg }}{% endraw %};transition:background 0.3s;"></button>
+              </sc-for>
+            </div>
+          </div>
+        </section>
+      </sc-if>
+
+      <!-- EXPERIENCE -->
+      <section style="padding:96px 0;">
+        <div style="max-width:1180px;margin:0 auto;padding:0 48px;">
+          <div
+            style="display:flex;align-items:baseline;gap:16px;border-top:1px solid var(--line);padding-top:18px;margin-bottom:8px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);">
+            <span style="color:var(--ink);">Experience</span>
+          </div>
+
+          {% for entry in experience_section.entries %}
+          {% assign ep = entry.title | split: ", " %}
+          {% assign erole = ep[0] %}
+          {% assign ecompany = ep[1] %}
+          {% if ecompany == "Raiffeisenbank" %}{% assign etag = "Fintech · Platform" %}
+          {% elsif ecompany == "Yandex" %}{% assign etag = "Infrastructure" %}
+          {% elsif ecompany == "EPAM Systems" %}{% assign etag = "Delivery · Pharma" %}
+          {% else %}{% assign etag = "Founder" %}{% endif %}
+          <div
+            style="display:grid;grid-template-columns:210px 1fr;gap:48px;border-top:1px solid var(--line);padding:34px 0;">
+            <div>
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:0.04em;">{{ entry.dates }}
+              </div>
+              <div
+                style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-top:8px;">
+                {{ etag }}</div>
+            </div>
+            <div>
+              <h3 style="margin:0;font-size:28px;font-weight:500;letter-spacing:-0.015em;line-height:1.15;">{{ erole }}
+              </h3>
+              <div style="font-size:18px;font-style:italic;color:var(--accent);margin-top:3px;">{{ ecompany }}</div>
+              <ul style="list-style:none;margin:20px 0 0;padding:0;display:flex;flex-direction:column;gap:11px;">
+                {% for bullet in entry.bullets %}
+                <li style="display:flex;gap:14px;font-size:17px;line-height:1.5;color:var(--ink-soft);"><span
+                    style="color:var(--accent);">—</span><span>{{ bullet }}</span></li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+          {% endfor %}
+
+          <div
+            style="display:flex;align-items:baseline;gap:16px;border-top:1px solid var(--line);padding-top:18px;margin-top:48px;margin-bottom:8px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);">
+            <span style="color:var(--ink);">{{ contracts_section.title }}</span>
+          </div>
+
+          {% for entry in contracts_section.entries %}
+          {% assign ep = entry.title | split: ", " %}
+          {% assign erole = ep[0] %}
+          {% assign ecompany = ep[1] %}
+          <div
+            style="display:grid;grid-template-columns:210px 1fr;gap:48px;border-top:1px solid var(--line);padding:34px 0;">
+            <div>
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:0.04em;">{{ entry.dates }}
+              </div>
+              <div
+                style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-top:8px;">
+                Leadership · Contract</div>
+            </div>
+            <div>
+              <h3 style="margin:0;font-size:28px;font-weight:500;letter-spacing:-0.015em;line-height:1.15;">{{ erole }}
+              </h3>
+              <div style="font-size:18px;font-style:italic;color:var(--accent);margin-top:3px;">{{ ecompany }} <span
+                  style="color:var(--muted);font-size:15px;">· concurrent</span></div>
+              <ul style="list-style:none;margin:20px 0 0;padding:0;display:flex;flex-direction:column;gap:11px;">
+                {% for bullet in entry.bullets %}
+                <li style="display:flex;gap:14px;font-size:17px;line-height:1.5;color:var(--ink-soft);"><span
+                    style="color:var(--accent);">—</span><span>{{ bullet }}</span></li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+          {% endfor %}
+
+        </div>
+      </section>
+
+      <!-- PROJECTS + PUBLICATIONS -->
+      <section style="padding:0 0 96px;">
+        <div style="max-width:1180px;margin:0 auto;padding:0 48px;display:grid;grid-template-columns:1fr 1fr;gap:72px;">
+          <div>
+            <div
+              style="display:flex;align-items:baseline;gap:16px;border-top:1px solid var(--line);padding-top:18px;margin-bottom:36px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);">
+              <span style="color:var(--ink);">Projects</span>
+            </div>
+            {% for entry in projects_section.entries %}
+            <div style="margin-bottom:34px;">
+              <h3 style="margin:0;font-size:23px;font-weight:500;letter-spacing:-0.01em;">{{ entry.title }}</h3>
+              <div
+                style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.04em;color:var(--muted);margin-top:6px;">
+                {% if entry.sub %}{{ entry.sub }}{% endif %}{% if entry.location %} · {{ entry.location }}{% endif %}{%
+                if entry.dates %} · {{ entry.dates }}{% endif %}
+              </div>
+              {% for bullet in entry.bullets %}
+              {% if bullet contains '[' %}
+              <div class="cv-link">{{ bullet | markdownify | remove: '<p>' | remove: '</p>' | strip_newlines | strip }}
+              </div>
+              {% else %}
+              <p style="margin:14px 0 0;font-size:16px;line-height:1.55;color:var(--ink-soft);">{{ bullet }}</p>
+              {% endif %}
+              {% endfor %}
+            </div>
+            {% endfor %}
+          </div>
+          <div>
+            <div
+              style="display:flex;align-items:baseline;gap:16px;border-top:1px solid var(--line);padding-top:18px;margin-bottom:36px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);">
+              <span style="color:var(--ink);">Writing</span>
+            </div>
+            {% for entry in publications_section.entries %}
+            <div style="margin-bottom:34px;">
+              <h3 style="margin:0;font-size:23px;font-weight:500;letter-spacing:-0.01em;">{{ entry.title }}</h3>
+              <div
+                style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.04em;color:var(--muted);margin-top:6px;">
+                {% if entry.sub %}{{ entry.sub }}{% endif %}
+              </div>
+              {% for bullet in entry.bullets %}
+              {% if bullet contains '[' %}
+              <div class="cv-link">{{ bullet | markdownify | remove: '<p>' | remove: '</p>' | strip_newlines | strip }}
+              </div>
+              {% else %}
+              <p style="margin:14px 0 0;font-size:16px;line-height:1.55;color:var(--ink-soft);">{{ bullet }}</p>
+              {% endif %}
+              {% endfor %}
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section style="background:var(--paper-soft);padding:88px 0;">
+        <div style="max-width:1180px;margin:0 auto;padding:0 48px;">
+          <div
+            style="display:flex;align-items:baseline;gap:16px;margin-bottom:44px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);">
+            <span style="color:var(--ink);">Skills &amp; Stack</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:30px;">
+            {% for skill in skills_section.entries %}
+            {% unless skill.title == "Languages" %}
+            <div
+              style="display:grid;grid-template-columns:220px 1fr;gap:32px;border-top:1px solid var(--line);padding-top:24px;">
+              <div
+                style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);">
+                {{ skill.title }}</div>
+              {% if skill.title == "Architecture" %}
+              <div style="font-size:18px;line-height:1.5;color:var(--ink-soft);">{{ skill.bullets[0] }}</div>
+              {% else %}
+              <div style="display:flex;flex-wrap:wrap;gap:8px;">
+                {% assign tags = skill.bullets[0] | split: ", " %}
+                {% for tag in tags %}
+                <span
+                  style="font-family:'IBM Plex Mono',monospace;font-size:13px;border:1px solid var(--line);padding:6px 13px;background:var(--paper);">{{
+                  tag }}</span>
+                {% endfor %}
+              </div>
+              {% endif %}
+            </div>
+            {% endunless %}
+            {% endfor %}
+          </div>
+        </div>
+      </section>
+
+      <!-- EDUCATION + CERTS + LANGUAGES -->
+      <section style="padding:88px 0;">
+        <div
+          style="max-width:1180px;margin:0 auto;padding:0 48px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:56px;">
+          <div>
+            <div
+              style="display:flex;align-items:baseline;gap:14px;border-top:1px solid var(--line);padding-top:18px;margin-bottom:30px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);">
+              <span style="color:var(--ink);">Education</span>
+            </div>
+            {% for entry in education_section.entries %}
+            <div style="margin-bottom:28px;">
+              <h3 style="margin:0;font-size:20px;font-weight:500;">{{ entry.title }}</h3>
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);margin-top:5px;">{{
+                entry.sub }}{% if entry.location %} · {{ entry.location }}{% endif %}</div>
+              {% for bullet in entry.bullets %}
+              <p style="margin:10px 0 0;font-size:15px;line-height:1.5;color:var(--ink-soft);">{{ bullet }}</p>
+              {% endfor %}
+            </div>
+            {% endfor %}
+          </div>
+          <div>
+            <div
+              style="display:flex;align-items:baseline;gap:14px;border-top:1px solid var(--line);padding-top:18px;margin-bottom:30px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);">
+              <span style="color:var(--ink);">Certifications</span>
+            </div>
+            {% for entry in certs_section.entries %}
+            <div style="margin-bottom:28px;">
+              <h3 style="margin:0;font-size:20px;font-weight:500;">{{ entry.title }}</h3>
+              {% for bullet in entry.bullets %}
+              <p style="margin:10px 0 0;font-size:15px;line-height:1.5;color:var(--ink-soft);">{{ bullet }}</p>
+              {% endfor %}
+            </div>
+            {% endfor %}
+          </div>
+          <div>
+            <div
+              style="display:flex;align-items:baseline;gap:14px;border-top:1px solid var(--line);padding-top:18px;margin-bottom:30px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);">
+              <span style="color:var(--ink);">Languages</span>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:16px;">
+              {% for item in lang_items %}
+              {% assign lparts = item | split: " (" %}
+              {% assign lname = lparts[0] %}
+              {% assign llevel = lparts[1] | remove: ")" %}
+              <div
+                style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:12px;">
+                <span style="font-size:18px;">{{ lname }}</span><span
+                  style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;">{{
+                  llevel }}</span>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <section style="background:var(--ink);color:var(--paper);padding:96px 0 56px;">
+        <div style="max-width:1180px;margin:0 auto;padding:0 48px;">
+          <div
+            style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin-bottom:24px;">
+            Open to what's next</div>
+          <h2
+            style="margin:0;font-size:clamp(40px,6.5vw,86px);line-height:0.98;letter-spacing:-0.035em;font-weight:500;">
+            Let's build something<br>that holds up.</h2>
+          <div style="display:flex;flex-wrap:wrap;gap:40px;margin-top:48px;align-items:baseline;">
+            <a href="mailto:{{ site.email }}"
+              style="font-size:22px;color:var(--paper);text-decoration:none;border-bottom:1px solid var(--accent);padding-bottom:3px;"
+              style-hover="color:var(--accent);">{{ site.email }}</a>
+            <div
+              style="display:flex;gap:24px;margin-left:auto;font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:0.04em;">
+              <a href="https://linkedin.com/in/{{ site.linkedin }}" target="_blank"
+                style="color:rgba(247,243,236,0.8);text-decoration:none;" style-hover="color:var(--accent);">LinkedIn
+                ↗</a>
+              <a href="https://github.com/{{ site.github }}" target="_blank"
+                style="color:rgba(247,243,236,0.8);text-decoration:none;" style-hover="color:var(--accent);">GitHub
+                ↗</a>
+              <a href="https://t.me/{{ site.telegram }}" target="_blank"
+                style="color:rgba(247,243,236,0.8);text-decoration:none;" style-hover="color:var(--accent);">Telegram
+                ↗</a>
+            </div>
+          </div>
+          <div
+            style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:72px;padding-top:24px;border-top:1px solid rgba(247,243,236,0.18);font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:0.06em;text-transform:uppercase;color:rgba(247,243,236,0.55);">
+            <span>{{ site.author }} — {{ hero_role }}</span>
+            <span>Belgrade, Serbia · Remote-first · EU hours</span>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </x-dc>
+  <script type="text/x-dc" data-dc-script data-props="{
+  &quot;$preview&quot;: { &quot;width&quot;: 1280, &quot;height&quot;: 1640 },
+  &quot;accentColor&quot;: { &quot;editor&quot;: &quot;color&quot;, &quot;default&quot;: &quot;#AE4A2C&quot;, &quot;options&quot;: [&quot;#AE4A2C&quot;, &quot;#1B4D3E&quot;, &quot;#2A4B7C&quot;, &quot;#6B3FA0&quot;], &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Theme&quot; },
+  &quot;showImpactBand&quot;: { &quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Sections&quot; },
+  &quot;availability&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Open to Staff / Principal roles&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Header&quot; }
+}">
+class Component extends DCLogic {
+  state = { impact: 0 };
+  SLIDES = 3;
+  componentDidMount(){ this.applyAccent(); this.startTimer(); }
+  componentDidUpdate(){ this.applyAccent(); }
+  componentWillUnmount(){ clearInterval(this.timer); }
+  applyAccent(){
+    const a = this.props.accentColor;
+    if (a) document.documentElement.style.setProperty('--accent', a);
+  }
+  startTimer(){
+    clearInterval(this.timer);
+    if (this.props.showImpactBand === false) return;
+    this.timer = setInterval(() => this.go(1), 7000);
+  }
+  go(dir){
+    this.setState(s => ({ impact: (s.impact + dir + this.SLIDES) % this.SLIDES }));
+    this.startTimer();
+  }
+  goTo(i){ this.setState({ impact: i }); this.startTimer(); }
+  renderVals(){
+    const i = this.state.impact;
+    return {
+      availability: this.props.availability || 'Open to Staff / Principal roles',
+      showImpact: this.props.showImpactBand !== false,
+trackTransform: 'translateX(-' + (i * 100) + '%)',
+      counter: '0' + (i + 1) + ' / 0' + this.SLIDES,
+      impactPrev: () => this.go(-1),
+      impactNext: () => this.go(1),
+      eye0: 'translateX(' + ((0 - i) * 90) + 'px)',
+      eye1: 'translateX(' + ((1 - i) * 90) + 'px)',
+      eye2: 'translateX(' + ((2 - i) * 90) + 'px)',
+      head0: 'translateX(' + ((0 - i) * 52) + 'px)',
+      head1: 'translateX(' + ((1 - i) * 52) + 'px)',
+      head2: 'translateX(' + ((2 - i) * 52) + 'px)',
+      dots: [0, 1, 2].map(n => ({
+        bg: n === i ? 'var(--accent)' : 'rgba(247,243,236,0.25)',
+        onClick: () => this.goTo(n),
+      })),
+    };
+  }
+}
+</script>
+
+  {% if site.yandex_metrika %}
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('[data-ym-goal]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          var goal = this.getAttribute('data-ym-goal');
+          if (typeof ym !== 'undefined') {
+            ym({{ site.yandex_metrika }}, 'reachGoal', goal);
+      }
+      });
+    });
+  });
+  </script>
+  {% endif %}
+
+</body>
+
+</html>

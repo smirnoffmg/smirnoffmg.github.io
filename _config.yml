@@ -19,6 +19,10 @@ image: https://github.com/smirnoffmg.png
 plugins:
   - jekyll-sitemap
 
+exclude:
+  - new/
+  - vendor/
+
 # Google Analytics
 google_analytics: G-4HG9NVZRVF
 

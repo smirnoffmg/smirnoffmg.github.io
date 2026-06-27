@@ -2,7 +2,7 @@ sections:
   - title: Summary
     entries:
       - bullets:
-          - "Principal Technical Lead with 12 years designing event-driven distributed systems at scale. Own the architecture of a credit automation platform spanning six teams at Raiffeisenbank; the event-driven redesign cut credit approval from 3 days to under 24 hours and reduced Kubernetes infrastructure costs by 30%. Set platform-wide technical standards, drive cross-team architectural decisions, and ship open-source infrastructure tooling. Based in Serbia — remote-first, EU-friendly hours. Open to Staff/Principal Engineer roles."
+          - "Engineer with 15+ years designing event-driven distributed systems at scale. Own the architecture of a credit automation platform spanning six teams at Raiffeisenbank; the event-driven redesign cut credit approval from 3 days to under 24 hours and reduced Kubernetes infrastructure costs by 30%. Set platform-wide technical standards, drive cross-team architectural decisions, and ship open-source infrastructure tooling."
 
   - title: Experience
     entries:
@@ -57,11 +57,13 @@ sections:
           - "Open-source toolkit computing cycle time, lead time, queue time, throughput, and other delivery metrics from Jira data."
           - "Designed to be modular, extensible, and fully tested."
           - "[Source on GitHub](https://github.com/smirnoffmg/metrics)"
-      - title: "litestar-keycloak"
+      - title: "Product Engineering Toolkit (PET)"
         sub: "Author and Maintainer"
-        location: "Open Source · PyPI"
+        location: "Open Source"
+        dates: "2025 – Present"
         bullets:
-          - "Keycloak authentication plugin for the LiteStar Python framework, published to PyPI."
+          - "Multi-agent AI assistant for PDLC and discovery processes"
+          - "[Source on GitHub](https://github.com/smirnoffmg/pet)"
 
   - title: Publications
     entries:
