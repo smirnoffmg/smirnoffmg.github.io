@@ -6,8 +6,30 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ site.author }} — Principal Technical Lead</title>
+  <title>{{ site.author }} — Bookworm</title>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+  <!-- Open Graph / social share -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ site.author }}">
+  <meta property="og:url" content="{{ site.url }}">
+  <meta property="og:title" content="{{ site.author }} — Bookworm">
+  <meta property="og:description" content="{{ site.description }}">
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/1089507?v=4">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="460">
+  <meta property="og:image:height" content="460">
+  <meta property="og:image:alt" content="{{ site.author }} profile photo">
+
+  <!-- Twitter / X card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@smirnoffmg">
+  <meta name="twitter:creator" content="@smirnoffmg">
+  <meta name="twitter:title" content="{{ site.author }} — Bookworm">
+  <meta name="twitter:description" content="{{ site.description }}">
+  <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/1089507?v=4">
+
+  <meta name="description" content="{{ site.description }}">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -16,7 +38,7 @@
       "@type": "Person",
       "@id": "{{ site.url }}/#person",
       "name": "{{ site.author }}",
-      "jobTitle": "Principal Technical Lead & Software Engineer",
+      "jobTitle": "Bookworm & Software Engineer",
       "email": "{{ site.email }}",
       "url": "{{ site.url }}",
       "address": {
