@@ -2,115 +2,113 @@ sections:
   - title: Summary
     entries:
       - bullets:
-          - "Cut credit approval time from 3 days to 24 hours and reduced Kubernetes infrastructure costs by 30% as Principal Technical Lead at Raiffeisenbank. 10+ years designing event-driven distributed systems and leading multi-team engineering organisations in fintech, enterprise, and startup environments. Based in Serbia — remote-first, EU-friendly hours. Open to Staff/Principal Engineer or Engineering Manager roles."
-
-  - title: Education
-    entries:
-      - title: "MIPT University"
-        sub: "Master in Data Science"
-        location: "Moscow, Russia"
-        bullets:
-          - "Data Entanglement in Machine Learning"
-
-      - title: "ITMO University"
-        sub: "Bachelor in Information Security"
-        location: "Saint Petersburg, Russia"
-        bullets:
-          - "Thesis: Developed a neural network for detecting steganographic content in digital images."
-
-  - title: Certifications
-    entries:
-      - title: "AWS Certified Solutions Architect"
-        bullets:
-          - "Validated expertise in designing and deploying scalable cloud systems on AWS."
-      - title: "IELTS 7.5"
-        bullets:
-          - "Certified English language proficiency at fluent level."
+          - "Principal Technical Lead with 12 years designing event-driven distributed systems at scale. Own the architecture of a credit automation platform spanning six teams at Raiffeisenbank; the event-driven redesign cut credit approval from 3 days to under 24 hours and reduced Kubernetes infrastructure costs by 30%. Set platform-wide technical standards, drive cross-team architectural decisions, and ship open-source infrastructure tooling. Based in Serbia — remote-first, EU-friendly hours. Open to Staff/Principal Engineer roles."
 
   - title: Experience
     entries:
       - title: "Principal Technical Lead, Raiffeisenbank"
         dates: "2024 – Present"
         bullets:
-          - "Directed development of an enterprise-scale credit automation platform, coordinating six engineering teams across microservices and event-driven architecture (Kafka, gRPC, REST)."
-          - "Architected migration to event-driven system with Kafka, reducing Kubernetes infrastructure costs by 30% and improving system observability via Prometheus and Grafana."
-          - "Shortened credit approval time from 3 days to under 24 hours through pipeline redesign and CI/CD automation."
-          - "Mentored senior engineers and defined hiring criteria and technical interview process for team scaling."
+          - "Own the architecture of an enterprise credit automation platform on event-driven microservices (Kafka, gRPC, REST), with technical decisions spanning six engineering teams in the risk and compliance domain."
+          - "Architected the migration to an event-driven system that reduced Kubernetes infrastructure costs by 30% and improved observability via Prometheus and Grafana."
+          - "Redesigned the approval pipeline and CI/CD to bring credit approval from 3 days to under 24 hours."
+          - "Established platform-wide engineering standards — service boundaries, event contracts, interview rubric — adopted across teams; mentored senior engineers toward technical ownership."
 
       - title: "Senior Software Engineer, Yandex"
         dates: "2022 – 2023"
         bullets:
-          - "Maintained Python library porting pipeline for Yandex's air-gapped internal package ecosystem: evaluated upstream OSS packages, authored compatibility patches, and integrated them into Yandex's proprietary VCS and package registry."
-          - "Engineered automation tooling to reduce manual overhead in the import and patching workflow, enabling internal teams to track and adopt new upstream releases reliably."
-
-      - title: "Engineering Manager, Runity"
-        dates: "2022 – 2023"
-        sub: "contract, concurrent"
-        bullets:
-          - "Improved project estimation accuracy, reducing variance by 10–15% through structured planning and delivery observability."
-          - "Achieved zero attrition while delivering six previously stalled projects by establishing clear ownership and mentoring practices."
-          - "Founded and launched company-sponsored technical training programs."
-
-      - title: "Engineering Manager, Metamap"
-        dates: "2022"
-        sub: "contract, concurrent"
-        bullets:
-          - "Reduced codebase by 50%, cutting release cycles from several days to hours via microservices decomposition and CI/CD pipeline overhaul."
-          - "Led architectural migration from monolith to microservices (Python, REST, Docker/Kubernetes), enabling product expansion into Latin America and Singapore."
+          - "Owned the Python library porting pipeline for Yandex's air-gapped internal package ecosystem: evaluated upstream OSS, authored compatibility patches, and integrated them into Yandex's proprietary VCS and package registry."
+          - "Engineered automation that reduced manual overhead in the import and patching workflow, enabling internal teams to track and adopt new upstream releases reliably."
 
       - title: "Lead Software Developer, EPAM Systems"
         dates: "2018 – 2021"
         bullets:
-          - "Led agile teams of 8–9 developers on pharmaceutical software projects, managing delivery, code quality, and stakeholder communication."
-          - "Founded and ran a Python Competence Center, delivering technical lectures, workshops, and mentoring to 100+ engineers."
-          - "Designed technical hiring and assessment frameworks, significantly expanding the engineering talent pool."
+          - "Technical lead for agile teams of 8–9 engineers on pharmaceutical software, owning architecture, code quality, and delivery."
+          - "Founded a Python Competence Center, raising engineering standards across 100+ engineers through lectures, workshops, and assessment frameworks."
 
       - title: "Co-Founder and Lead Python Developer, Aglaya"
         dates: "2014 – 2018"
         bullets:
-          - "Co-founded and led a team of 10 engineers, delivering custom information systems for enterprise clients."
+          - "Co-founded the company and led the technical delivery of custom information systems for enterprise clients with a team of 10."
 
-  - title: Projects
+  - title: Selected Contract Engagements
     entries:
-      - title: "Python Competence Center"
-        sub: "Founder and Instructor"
-        location: "EPAM Systems"
-        dates: "2018 – 2021"
+      - title: "Engineering Lead, Metamap"
+        dates: "2022"
+        sub: "contract"
         bullets:
-          - "Developed curriculum and facilitated hands-on training for Python developers."
-          - "Increased team proficiency and standardized technical evaluation protocols."
+          - "Led the architectural migration from monolith to microservices (Python, REST, Docker/Kubernetes), enabling product expansion into Latin America and Singapore."
+          - "Reduced the codebase by 50%, cutting release cycles from days to hours through a CI/CD pipeline overhaul."
+
+      - title: "Engineering Lead, Runity"
+        dates: "2022 – 2023"
+        sub: "contract"
+        bullets:
+          - "Delivered six previously stalled projects by establishing clear technical ownership."
+          - "Improved estimation accuracy, reducing variance by 10–15% through structured planning and delivery observability."
+
+  - title: Open Source & Projects
+    entries:
       - title: "Metrics: Jira Engineering Analytics Toolkit"
         sub: "Author and Maintainer"
         location: "Open Source"
         dates: "2023 – Present"
         bullets:
-          - "Created an open-source toolkit for analyzing and visualizing software engineering metrics from Jira."
-          - "Implemented calculations for cycle time, lead time, queue time, throughput, and other key metrics."
-          - "Designed the toolkit to be modular, extensible, and fully tested."
+          - "Open-source toolkit computing cycle time, lead time, queue time, throughput, and other delivery metrics from Jira data."
+          - "Designed to be modular, extensible, and fully tested."
           - "[Source on GitHub](https://github.com/smirnoffmg/metrics)"
+      - title: "litestar-keycloak"
+        sub: "Author and Maintainer"
+        location: "Open Source · PyPI"
+        bullets:
+          - "Keycloak authentication plugin for the LiteStar Python framework, published to PyPI."
 
   - title: Publications
     entries:
       - title: "Software Engineering Metrics"
         sub: "Medium, 2024"
         bullets:
-          - "Outlined practical metrics for software teams using Jira data."
-          - "Demonstrated methods to identify bottlenecks and visualize delivery trends."
-          - "Explained how to use metrics for forecasting and process improvement."
+          - "Practical delivery metrics for software teams using Jira data: identifying bottlenecks, visualising trends, and forecasting."
           - "[Read on Medium](https://medium.com/@smirnoffmg/software-engineering-metrics-b6c4b37b5fd2)"
       - title: "Profiling Asynchronous Python"
         sub: "Medium, 2023"
         bullets:
-          - "Described common performance bottlenecks in asynchronous Python applications, including blocking calls and context switching."
-          - "Compared deterministic and statistical profilers, highlighting strengths of tools such as Scalene for async code."
-          - "Provided guidance on interpreting profiler results and optimizing asynchronous Python performance."
+          - "Performance bottlenecks in async Python, deterministic vs. statistical profilers, and interpreting profiler results for optimisation."
           - "[Read on Medium](https://medium.com/@smirnoffmg/profiling-asynchronous-python-b73cde75aa2d)"
+
+  - title: Education
+    entries:
+      - title: "MIPT University"
+        sub: "M.Sc. in Data Science"
+        location: "Moscow, Russia"
+        dates: "2023 – 2025"
+        bullets:
+          - "Focus: machine learning systems and MLOps."
+
+      - title: "ITMO University"
+        sub: "B.Sc. in Information Security"
+        location: "Saint Petersburg, Russia"
+        bullets:
+          - "Thesis: a neural network for detecting steganographic content in digital images."
+
+  - title: Certifications
+    entries:
+      - title: "AWS Certified Solutions Architect"
+        bullets:
+          - "Designing and deploying scalable cloud systems on AWS."
+      - title: "IELTS 7.5"
+        dates: "2022"
+        bullets:
+          - "English at fluent level."
 
   - title: Skills
     entries:
+      - title: "Architecture"
+        bullets:
+          - "Distributed systems, event-driven design, system design, technical leadership"
       - title: "Programming Languages"
         bullets:
-          - "Python, Go, C++, Clojure"
+          - "Python, Go"
       - title: "Databases"
         bullets:
           - "PostgreSQL, MongoDB, Redis"
@@ -122,11 +120,7 @@ sections:
           - "Kafka, RabbitMQ, gRPC, REST"
       - title: "Frameworks and Tools"
         bullets:
-          - "LiteStar, Gin, FastAPI, Django, PyTorch, LangChain, Ollama"
-      - title: "Practices"
-        bullets:
-          - "System Design, Distributed Systems Architecture, Technical Leadership, Mentoring, Hiring"
+          - "LiteStar, FastAPI, Django, Gin, PyTorch, LangChain, Ollama"
       - title: "Languages"
         bullets:
-          - "English (Fluent), German (Beginner), Russian (Native)"
-
+          - "English (Fluent), Russian (Native), German (Beginner)"

@@ -1,7 +1,7 @@
 author: Maksim Smirnov
 
 title: Maksim Smirnov
-tagline: "Principal Technical Lead & Software Engineer"
+tagline: "Principal Technical Lead / Staff Engineer"
 
 baseurl: ""
 
@@ -13,7 +13,7 @@ email: "smirnoffmg@gmail.com"
 linkedin: "hello-maksim-smirnov"
 github: smirnoffmg
 telegram: "smirnov_maksim_grigorevich"
-description: "Principal Technical Lead and Software Engineer with 10+ years of experience in Python, Go, cloud architecture (AWS), and engineering leadership. Currently at Raiffeisenbank."
+description: "Principal Technical Lead / Staff Engineer with 12 years designing event-driven distributed systems and setting platform-wide technical standards. Python, Go, AWS, Kubernetes. Currently at Raiffeisenbank."
 image: https://github.com/smirnoffmg.png
 
 plugins:
